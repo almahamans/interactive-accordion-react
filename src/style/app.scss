@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap");
+
+$openColor: #087f5b;
+$headerColor: #e7eaed;
+$numberColor: #ced4da;
+$listFontSize: 25px;
+$nameFontSize: 40px;
+
+* {
+    margin: 0;
+  }
+  body {
+    font-family: "Dongle", sans-serif;
+  }
+  .App {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+.accordion__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 25px;
+  }
+  .accordion__item {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid transparent;
+  }
+  .accordion__header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+.accordion__header:hover {
+    background: $headerColor;
+  }
+  .accordion__number {
+    font-size: $nameFontSize;
+    color: $numberColor;
+  }
+  .accordion__name {
+    flex: 1;
+    font-size: $nameFontSize;
+  }
+  .accordion__details {
+    padding: 0 2rem;
+    overflow: hidden;
+    height: 0;
+  }
+.accordion__details{
+    ul{
+        font-size: $listFontSize;
+        padding: 1rem 2rem;
+        list-style-type:circle;
+    }
+}
+.open{
+    border-color: $openColor;
+}
+.open{
+    .accordion__header, .accordion__number{
+        color: $openColor;
+    }
+    .accordion__details {
+        height: auto;
+    }
+}
